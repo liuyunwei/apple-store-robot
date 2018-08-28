@@ -1,0 +1,30 @@
+{
+  "name": "apple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "./node_modules/anywhere/bin/anywhere  -d orders",
+    "start": "node --harmony script/index.js  >> ./logs/log",
+    "monitor": "node --harmony script/index.js -m",
+    "clear-session": "rm -rf ./cookies/*",
+    "clear-orders": "rm -rf ./orders/*",
+    "clear-logs": "rm -rf ./logs/*",
+    "clear": "npm run clear-session && npm run clear-orders && npm run clear-logs",
+    "auto": "npm run clear && npm run start && npm run server "
+  },
+  "author": "liuyunwei",
+  "license": "ISC",
+  "dependencies": {
+    "anywhere": "^1.4.0",
+    "commander": "^2.11.0",
+    "debug": "^3.1.0",
+    "md5": "^2.2.1",
+    "mz": "^2.7.0",
+    "nodemailer": "^4.3.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "tough-cookie-filestore": "^0.0.1",
+    "underscore": "^1.8.3"
+  }
+}
